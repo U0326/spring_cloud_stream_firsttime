@@ -1,0 +1,13 @@
+spring.cloud.stream:
+  bindings:
+    orders:
+      destination: order-topic
+      contentType: application/json
+    coldDrinks:
+      destination: cold-drink-topic
+      group: message-group
+  kafka.binder:
+    brokers: localhost
+    defaultBrokerPort: 9092
+    zkNodes: localhost
+    defaultZkPort: 2181
